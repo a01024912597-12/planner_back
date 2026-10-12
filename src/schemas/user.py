@@ -18,6 +18,9 @@ class User(BaseModel):
             ]
         }
     }
+class UserCreate(BaseModel):
+    email:str
+    password: str
 
 class UserSignin(BaseModel):
     email: str  
@@ -34,3 +37,9 @@ class UserSignin(BaseModel):
             ]
         }
     }
+
+
+
+class Token(BaseModel):
+    access_token:str
+    token_type:str="bearer"
